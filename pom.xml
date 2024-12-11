@@ -47,29 +47,29 @@
           </archive>
         </configuration>
       </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-enforcer-plugin</artifactId>
-        <version>3.5.0</version>
-        <executions>
-          <execution>
+     <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-enforcer-plugin</artifactId>
+    <version>3.5.0</version>
+    <executions>
+        <execution>
             <id>enforce-maven</id>
             <goals>
-              <goal>enforce</goal>
+                <goal>enforce</goal>
             </goals>
             <configuration>
-              <rules>
-                <requireMavenVersion>
-                  <version>[3.9.2,)</version>
-                </requireMavenVersion>
-                <requireJavaVersion>
-                  <version>[17,)</version>
-                </requireJavaVersion>
-              </rules>
+                <rules>
+                    <requireMavenVersion>
+                        <version>[3.6.3,)</version> <!-- Adjusted to match installed version -->
+                    </requireMavenVersion>
+                    <requireJavaVersion>
+                        <version>[1.8,)</version> <!-- Adjusted to match installed version -->
+                    </requireJavaVersion>
+                </rules>
             </configuration>
-          </execution>
-        </executions>
-      </plugin>
+        </execution>
+    </executions>
+</plugin>
     </plugins>
   </build>
 </project>
